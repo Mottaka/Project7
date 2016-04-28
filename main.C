@@ -19,15 +19,30 @@
 using namespace std;
 
 
-class bank
+class Bank
 {
   public:
   	int goodTellers, badTellers;
   	int managers;
-
+   double time;
   	bool bankState;
   	bool busy;
 
+   if(time < 0)
+   {
+    bankState = FALSE;
+   }
+   
+   else if (time > 28800)
+   {
+    bankState = FALSE;
+   }
+   
+   else
+   {
+    return TRUE;
+   }
+   
   	bool isBusy()
     { 
       return busy;
